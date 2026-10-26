@@ -1,12 +1,11 @@
 import os
 import datetime
 import feedparser
-import google.generativeai as genai
+from google import genai
 import re
 
-# Configure Gemini
-genai.configure(api_key=os.environ["GEMINI_API_KEY"])
-model = genai.GenerativeModel('gemini-1.5-flash')
+# Configure Gemini using the new SDK
+client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
 # Fetch RSS Feed
 feed = feedparser.parse('https://taxguru.in/feed/')
@@ -14,7 +13,11 @@ latest_entry = feed.entries[0]
 
 # Generate Content
 prompt = f"Write a professional 2-paragraph summary of this Indian tax update for a CA firm's blog. Do not use conversational filler. Title: {latest_entry.title}. Link: {latest_entry.link}"
-response = model.generate_content(prompt)
+
+response = client.models.generate_content(
+    model='gemini-1.5-flash',
+    contents=prompt
+)
 
 # Format for Jekyll Website
 date_str = datetime.datetime.now().strftime('%Y-%m-%d')
