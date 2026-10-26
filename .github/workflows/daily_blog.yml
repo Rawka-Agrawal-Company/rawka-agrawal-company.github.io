@@ -2,8 +2,8 @@ name: Daily CA Blog Publisher
 
 on:
   schedule:
-    - cron: '30 4 * * *' # 10:00 AM IST
-  workflow_dispatch: # Allows manual triggers
+    - cron: '30 4 * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -21,11 +21,12 @@ jobs:
           python-version: '3.11'
 
       - name: Install Dependencies
-        run: pip install feedparser google-genai
+        run: pip install feedparser google-genai openai
 
       - name: Generate Post
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python update_blog.py
 
       - name: Commit and Push New Post
