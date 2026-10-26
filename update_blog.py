@@ -15,7 +15,7 @@ latest_entry = feed.entries[0]
 prompt = f"Write a professional 2-paragraph summary of this Indian tax update for a CA firm's blog. Do not use conversational filler. Title: {latest_entry.title}. Link: {latest_entry.link}"
 
 response = client.models.generate_content(
-    model='gemini-1.5-flash',
+    model='gemini-2.5-flash',
     contents=prompt
 )
 
