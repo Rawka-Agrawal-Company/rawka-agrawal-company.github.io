@@ -29,7 +29,7 @@ plugins:
 
 author:
   name   : "Rawka Agrawal & Company"
-  avatar : ""
+  avatar : "/logo.png"
   bio    : "401, Chetak Centre, 12/2 RNT Marg, Indore 452001 <br> Phone: +91 98262 97313"
   links:
     - label: "Email Us"
