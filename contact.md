@@ -4,9 +4,9 @@ permalink: /contact/
 layout: single
 ---
 
-**Office Address:** 401, Chetak Centre, 12/2 RNT Marg, Indore 452001, Madhya Pradesh, India[cite: 9]  
-**Phone:** +91 98262 97313[cite: 9]  
-**Email:** sandeepgarg.fca@gmail.com | kcagrawalco@gmail.com[cite: 9]  
+**Office Address:** 401, Chetak Centre, 12/2 RNT Marg, Indore 452001, Madhya Pradesh, India  
+**Phone:** +91 98262 97313  
+**Email:** sandeepgarg.fca@gmail.com | kcagrawalco@gmail.com  
 
 Please fill out the form below to request a consultation.
 
