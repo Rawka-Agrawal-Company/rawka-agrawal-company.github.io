@@ -27,3 +27,18 @@ Please fill out the form below to request a consultation.
 
   <button type="submit" style="padding: 10px 20px; background-color: #333; color: white; border: none; cursor: pointer;">Send Request</button>
 </form>
+
+<hr style="margin: 30px 0;">
+
+<h3>Find Our Office</h3>
+<div style="width: 100%; height: 350px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <iframe 
+    src="https://maps.google.com/maps?q=Chetak+Centre,+RNT+Marg,+Indore,+Madhya+Pradesh+452001&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+    width="100%" 
+    height="100%" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
