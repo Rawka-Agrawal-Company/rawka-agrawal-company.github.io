@@ -81,7 +81,7 @@
     <div class="team-info">
       <h3 class="team-name">CA Kailash Agrawal</h3>
       <span class="team-title">Senior Partner</span>
-      <p class="team-bio">With over five decades of distinguished professional practice, CA Kailash Agrawal brings unparalleled expertise in direct taxation and appellate matters. He provides high-level guidance on complex tax litigations and strategic corporate tax planning.</p>
+      <p class="team-bio">With over five decades of distinguished professional practice, CA Kailash Agrawal provides foundational leadership and high-level strategic oversight to the firm. He leverages his extensive experience to monitor practice quality and advise the leadership team on complex tax litigations and corporate planning.</p>
     </div>
   </div>
 
@@ -90,7 +90,7 @@
     <div class="team-info">
       <h3 class="team-name">CA Sandeep Garg</h3>
       <span class="team-title">Senior Partner</span>
-      <p class="team-bio">With nearly three decades of professional experience, CA Sandeep Garg spearheads the firm’s Internal Audit and Management Consultancy divisions. He directs strategic accounts and delivers actionable financial insights across the telecom, real estate, logistics, and education sectors.</p>
+      <p class="team-bio">With nearly three decades of professional experience, CA Sandeep Garg serves as the principal managing partner overseeing the firm’s entire spectrum of services. He actively leads all client communications, statutory audits, tax assessments, return filings, and comprehensive management consultancy engagements.</p>
     </div>
   </div>
 
