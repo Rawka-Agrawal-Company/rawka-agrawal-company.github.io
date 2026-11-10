@@ -14,16 +14,12 @@
     gap: 24px;
   }
   .service-card {
-    display: block;
-    text-decoration: none;
-    color: inherit;
     border: 1px solid #eaeaea;
     border-radius: 8px;
     padding: 28px;
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0,0,0,0.02);
     transition: box-shadow 0.2s ease, transform 0.2s ease;
-    cursor: pointer;
   }
   .service-card:hover {
     box-shadow: 0 6px 12px rgba(0,0,0,0.08);
@@ -70,17 +66,6 @@
   .service-list strong {
     color: #2c3e50;
   }
-  .whatsapp-cta {
-    display: block;
-    margin-top: 20px;
-    font-size: 0.9em;
-    font-weight: 700;
-    color: #25D366;
-    transition: color 0.2s ease;
-  }
-  .service-card:hover .whatsapp-cta {
-    text-decoration: underline;
-  }
 </style>
 
 <div class="services-section">
@@ -88,7 +73,7 @@
 
   <div class="services-grid">
     
-    <a href="https://wa.me/919826297313?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20Audit%20and%20Assurance%20services." target="_blank" rel="noopener noreferrer" class="service-card">
+    <div class="service-card">
       <h3 class="service-title">Audit & Assurance</h3>
       <p class="service-intro">We provide independent, objective, and rigorous assurance services designed to enhance the reliability of financial information for stakeholders, regulators, and management.</p>
       <ul class="service-list">
@@ -97,10 +82,9 @@
         <li><strong>Internal Audits:</strong> Deep-dive operational audits to evaluate internal controls, identify revenue leakages, and optimize resource allocation.</li>
         <li><strong>Bank & Forensic Audits:</strong> Specialized assignments including concurrent audits, stock audits, and fraud investigations for financial institutions.</li>
       </ul>
-      <span class="whatsapp-cta">Enquire via WhatsApp &rarr;</span>
-    </a>
+    </div>
 
-    <a href="https://wa.me/919826297313?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20Direct%20Taxation%20and%20Assessments%20services." target="_blank" rel="noopener noreferrer" class="service-card">
+    <div class="service-card">
       <h3 class="service-title">Direct Taxation & Assessments</h3>
       <p class="service-intro">We offer end-to-end direct tax management, from routine compliance to complex appellate litigation, ensuring our clients minimize tax liabilities while maintaining strict regulatory adherence.</p>
       <ul class="service-list">
@@ -109,10 +93,9 @@
         <li><strong>Corporate Tax Planning:</strong> Strategic structuring of business transactions, capital gains management, and utilizing available deductions/exemptions.</li>
         <li><strong>TDS & TCS Compliance:</strong> Periodic filing of withholding tax returns and reconciliation of 26AS/AIS discrepancies.</li>
       </ul>
-      <span class="whatsapp-cta">Enquire via WhatsApp &rarr;</span>
-    </a>
+    </div>
 
-    <a href="https://wa.me/919826297313?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20GST%20and%20Indirect%20Taxation%20services." target="_blank" rel="noopener noreferrer" class="service-card">
+    <div class="service-card">
       <h3 class="service-title">GST & Indirect Taxation</h3>
       <p class="service-intro">Navigating the complexities of the Goods and Services Tax framework with proactive compliance, precise reconciliations, and strategic advisory.</p>
       <ul class="service-list">
@@ -121,10 +104,9 @@
         <li><strong>GST Audits & Annual Returns:</strong> Comprehensive reconciliation for GSTR-9 and GSTR-9C certifications.</li>
         <li><strong>Departmental Representation:</strong> Drafting replies to show-cause notices (SCNs), handling GST assessments, and representing clients in departmental audits.</li>
       </ul>
-      <span class="whatsapp-cta">Enquire via WhatsApp &rarr;</span>
-    </a>
+    </div>
 
-    <a href="https://wa.me/919826297313?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20Management%20and%20Strategic%20Consultancy%20services." target="_blank" rel="noopener noreferrer" class="service-card">
+    <div class="service-card">
       <h3 class="service-title">Management & Strategic Consultancy</h3>
       <p class="service-intro">Leveraging decades of financial expertise to provide strategic foresight, operational structuring, and capital acquisition support for growing businesses.</p>
       <ul class="service-list">
@@ -132,10 +114,9 @@
         <li><strong>Standard Operating Procedures (SOPs):</strong> Drafting and implementing robust SOPs to streamline internal business operations and mitigate financial risks.</li>
         <li><strong>Business Valuation & Due Diligence:</strong> Financial modeling, enterprise valuations, and comprehensive due diligence for mergers, acquisitions, or restructuring.</li>
       </ul>
-      <span class="whatsapp-cta">Enquire via WhatsApp &rarr;</span>
-    </a>
+    </div>
 
-    <a href="https://wa.me/919826297313?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20Corporate%20and%20Secretarial%20Advisory%20services." target="_blank" rel="noopener noreferrer" class="service-card">
+    <div class="service-card">
       <h3 class="service-title">Corporate & Secretarial Advisory</h3>
       <p class="service-intro">Ensuring seamless compliance with the Ministry of Corporate Affairs (MCA) and allied regulatory bodies.</p>
       <ul class="service-list">
@@ -143,8 +124,7 @@
         <li><strong>Annual ROC Compliances:</strong> Filing of annual financial statements (AOC-4), annual returns (MGT-7), and maintenance of statutory registers.</li>
         <li><strong>Event-Based Filings:</strong> Managing changes in directorships, registered office shifts, alterations in capital structures, and Director KYC via the MCA V3 portal.</li>
       </ul>
-      <span class="whatsapp-cta">Enquire via WhatsApp &rarr;</span>
-    </a>
+    </div>
 
   </div>
 </div>
