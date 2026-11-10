@@ -2,26 +2,38 @@
   .team-section {
     margin-top: 30px;
   }
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  .team-card-horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     gap: 24px;
-    margin-bottom: 40px;
-  }
-  .team-card {
     border: 1px solid #eaeaea;
     border-radius: 8px;
     padding: 24px;
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    margin-bottom: 24px;
     transition: box-shadow 0.2s ease;
   }
-  .team-card:hover {
+  .team-card-horizontal:hover {
     box-shadow: 0 6px 12px rgba(0,0,0,0.08);
   }
+  .team-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 8px;
+    object-fit: cover;
+    background-color: #f8f9fa;
+    border: 1px solid #eaeaea;
+    flex-shrink: 0;
+  }
+  .team-info {
+    display: flex;
+    flex-direction: column;
+  }
   .team-name {
-    margin: 0 0 4px 0;
-    font-size: 1.25em;
+    margin: 0 0 4px 0 !important;
+    font-size: 1.35em;
     color: #2c3e50;
   }
   .team-title {
@@ -32,67 +44,105 @@
     letter-spacing: 0.5px;
     margin-bottom: 12px;
     display: block;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 8px;
   }
   .team-bio {
     font-size: 0.95em;
     line-height: 1.6;
     color: #4a5568;
-    margin: 0;
+    margin: 0 !important;
+  }
+  .support-staff-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #0056b3;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #4a5568;
+  }
+  
+  /* Stacks the photo on top of the text on small screens */
+  @media (max-width: 650px) {
+    .team-card-horizontal {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
 </style>
 
 <div class="team-section">
   <h2>Partners</h2>
-  <div class="team-grid">
-    
-    <div class="team-card">
+  
+  <div class="team-card-horizontal">
+    <!-- Replace src with actual image path once uploaded, e.g., /assets/images/kailash.jpg -->
+    <img src="https://via.placeholder.com/140/f0f0f0/cccccc?text=Photo" alt="CA Kailash Agrawal" class="team-photo">
+    <div class="team-info">
       <h3 class="team-name">CA Kailash Agrawal</h3>
-      <span class="team-title">Founding Partner</span>
-      <p class="team-bio">Over 50 years of extensive experience specializing in direct taxation, complex litigation, and high-level assessment representation.</p>
-    </div>
-
-    <div class="team-card">
-      <h3 class="team-name">CA Sandeep Garg</h3>
       <span class="team-title">Senior Partner</span>
-      <p class="team-bio">Practicing since 1997, leading the firm's Internal Audit and Management Consultancy divisions. Directs strategic accounts across the telecom, real estate, logistics, and education sectors.</p>
+      <p class="team-bio">With over five decades of distinguished professional practice, CA Kailash Agrawal brings unparalleled expertise in direct taxation and appellate matters. He provides high-level guidance on complex tax litigations and strategic corporate tax planning.</p>
     </div>
-
-    <div class="team-card">
-      <h3 class="team-name">CA Vikas Bansal</h3>
-      <span class="team-title">Partner</span>
-      <p class="team-bio">Recognized for a highly analytical approach to regulatory frameworks and delivering practical, business-oriented tax solutions.</p>
-    </div>
-
-    <div class="team-card">
-      <h3 class="team-name">CA Shubham Goyal</h3>
-      <span class="team-title">Partner</span>
-      <p class="team-bio">Drives the firm's indirect tax compliance, bringing specialized expertise in GST implementation, internal audits, and proactive corporate advisory.</p>
-    </div>
-
   </div>
 
-  <h2>Core Team & Counsel</h2>
-  <div class="team-grid">
+  <div class="team-card-horizontal">
+    <img src="https://via.placeholder.com/140/f0f0f0/cccccc?text=Photo" alt="CA Sandeep Garg" class="team-photo">
+    <div class="team-info">
+      <h3 class="team-name">CA Sandeep Garg</h3>
+      <span class="team-title">Senior Partner</span>
+      <p class="team-bio">With nearly three decades of professional experience, CA Sandeep Garg spearheads the firm’s Internal Audit and Management Consultancy divisions. He directs strategic accounts and delivers actionable financial insights across the telecom, real estate, logistics, and education sectors.</p>
+    </div>
+  </div>
 
-    <div class="team-card">
+  <div class="team-card-horizontal">
+    <img src="https://via.placeholder.com/140/f0f0f0/cccccc?text=Photo" alt="CA Vikas Bansal" class="team-photo">
+    <div class="team-info">
+      <h3 class="team-name">CA Vikas Bansal</h3>
+      <span class="team-title">Partner</span>
+      <p class="team-bio">CA Vikas Bansal brings valuable strategic oversight and advisory support to the firm's leadership team. He contributes to the firm's overarching compliance strategies and provides high-level guidance on complex regulatory frameworks.</p>
+    </div>
+  </div>
+
+  <div class="team-card-horizontal">
+    <img src="https://via.placeholder.com/140/f0f0f0/cccccc?text=Photo" alt="CA Shubham Goyal" class="team-photo">
+    <div class="team-info">
+      <h3 class="team-name">CA Shubham Goyal</h3>
+      <span class="team-title">Partner</span>
+      <p class="team-bio">CA Shubham Goyal is a key member of the firm's audit and assurance practice, specializing in the seamless execution of statutory audits. His meticulous approach to financial reconciliation and compliance reporting ensures high-quality deliverables. </p>
+    </div>
+  </div>
+
+  <h2>Core Team & Administration</h2>
+
+  <div class="team-card-horizontal">
+    <img src="https://via.placeholder.com/140/f0f0f0/cccccc?text=Photo" alt="CA Ankit Neema" class="team-photo">
+    <div class="team-info">
       <h3 class="team-name">CA Ankit Neema</h3>
       <span class="team-title">Associate</span>
-      <p class="team-bio">Manages execution of Internal Audits, comprehensive GST reconciliations, and rigorous Income Tax Return filings.</p>
+      <p class="team-bio">CA Ankit Neema drives critical statutory and internal audit engagements for the firm's corporate clientele. He brings specialized proficiency in risk assessment and financial compliance, ensuring rigorous adherence to auditing standards.</p>
     </div>
+  </div>
 
-    <div class="team-card">
+  <div class="team-card-horizontal">
+    <img src="https://via.placeholder.com/140/f0f0f0/cccccc?text=Photo" alt="CA Piyush Garg" class="team-photo">
+    <div class="team-info">
       <h3 class="team-name">CA Piyush Garg</h3>
       <span class="team-title">Associate</span>
-      <p class="team-bio">Spearheads business valuation models, corporate due diligence reporting, and the drafting of standard operating procedures (SOPs).</p>
+      <p class="team-bio">CA Piyush Garg provides dedicated financial management and customized compliance solutions for key strategic accounts. His highly focused approach ensures that complex client portfolios receive continuous, specialized attention and robust operational support.</p>
     </div>
+  </div>
 
-    <div class="team-card">
+  <div class="team-card-horizontal">
+    <img src="https://via.placeholder.com/140/f0f0f0/cccccc?text=Photo" alt="Adv. Soumya Garg" class="team-photo">
+    <div class="team-info">
       <h3 class="team-name">Adv. Soumya Garg</h3>
-      <span class="team-title">Legal Associate</span>
-      <p class="team-bio">Provides specialized legal counsel and business consultancy, focusing heavily on National Company Law Tribunal (NCLT) matters and corporate restructuring.</p>
+      <span class="team-title">Head of Operations & Tax Compliance</span>
+      <p class="team-bio">Adv. Soumya Garg oversees the firm's internal operations, management workflows, and individual tax compliance mandates, including comprehensive ITR filings. Leveraging her legal background, she ensures seamless administrative functioning and efficient service delivery.</p>
     </div>
+  </div>
 
+  <h2>Professional Support Staff</h2>
+  <div class="support-staff-box">
+    The core leadership is backed by a dynamic team of accountants, compliance executives, and article assistants. This dedicated support staff ensures the timely and accurate execution of daily financial workflows, return filings, and client service mandates.
   </div>
 </div>
