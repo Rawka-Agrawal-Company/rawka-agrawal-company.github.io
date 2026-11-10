@@ -33,12 +33,12 @@ Please fill out the form below to request a consultation.
 <h3>Find Our Office</h3>
 <div style="width: 100%; height: 350px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
   <iframe 
-    src="https://maps.google.com/maps?q=Chetak+Centre,+RNT+Marg,+Indore,+Madhya+Pradesh+452001&t=&z=16&ie=UTF8&iwloc=&output=embed" 
-    width="100%" 
-    height="100%" 
-    style="border:0;" 
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
+  width="100%" 
+  height="450" 
+  style="border:0; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);" 
+  frameborder="0" 
+  scrolling="no" 
+  marginheight="0" 
+  marginwidth="0" 
+  src="https://maps.google.com/maps?width=100%25&amp;height=450&amp;hl=en&amp;q=401,%20Chetak%20Centre,%2012/2%20RNT%20Marg,%20Indore+(Rawka%20Agrawal%20%26%20Company)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+</iframe>
