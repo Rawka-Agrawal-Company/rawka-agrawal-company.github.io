@@ -40,5 +40,5 @@ Please fill out the form below to request a consultation.
   scrolling="no" 
   marginheight="0" 
   marginwidth="0" 
-  src="https://maps.google.com/maps?width=100%25&amp;height=450&amp;hl=en&amp;q=401,%20Chetak%20Centre,%2012/2%20RNT%20Marg,%20Indore+(Rawka%20Agrawal%20%26%20Company)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+  src="https://maps.google.com/maps?width=100%25&amp;height=450&amp;hl=en&amp;q=Chetak%20Centre,%20RNT%20Marg,%20Indore&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
 </iframe>
