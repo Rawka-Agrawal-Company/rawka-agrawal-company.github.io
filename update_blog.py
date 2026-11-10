@@ -2,6 +2,7 @@ import os
 import datetime
 import feedparser
 import re
+import time
 from google import genai
 from openai import OpenAI
 
@@ -11,24 +12,44 @@ latest_entry = feed.entries[0]
 prompt = f"Write a professional 2-paragraph summary of this Indian tax update for a CA firm's blog. Do not use conversational filler. Title: {latest_entry.title}. Link: {latest_entry.link}"
 
 blog_content = ""
+gemini_success = False
+max_retries = 3
 
-# Try Gemini First
-try:
-    gemini_client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
-    response = gemini_client.models.generate_content(
-        model='gemini-3.8-flash',
-        contents=prompt
-    )
-    blog_content = response.text
-except Exception as e:
-    print(f"Gemini failed ({e}). Switching to ChatGPT...")
-    # Fallback to ChatGPT
-    openai_client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
-    response = openai_client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[{"role": "user", "content": prompt}]
-    )
-    blog_content = response.choices[0].message.content
+# Try Gemini First (with Retry Logic for 503 Errors)
+for attempt in range(max_retries):
+    try:
+        gemini_client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+        response = gemini_client.models.generate_content(
+            model='gemini-3.8-flash',
+            contents=prompt
+        )
+        blog_content = response.text
+        gemini_success = True
+        break  # Exit loop if successful
+        
+    except Exception as e:
+        error_msg = str(e)
+        if "503" in error_msg and attempt < max_retries - 1:
+            print(f"Gemini overloaded (Attempt {attempt + 1} of {max_retries}). Waiting 30 seconds...")
+            time.sleep(30)
+        else:
+            print(f"Gemini failed ({error_msg}).")
+            break # Break out of loop if it's not a 503 or if retries are exhausted
+
+# Fallback to ChatGPT if Gemini failed all attempts
+if not gemini_success:
+    print("Switching to ChatGPT...")
+    try:
+        openai_client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+        response = openai_client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": prompt}]
+        )
+        blog_content = response.choices[0].message.content
+    except Exception as e:
+        print(f"OpenAI fallback also failed: {e}")
+        # Exit script with error code so GitHub Actions registers the failure
+        exit(1)
 
 # Format for Jekyll Website
 date_str = datetime.datetime.now().strftime('%Y-%m-%d')
