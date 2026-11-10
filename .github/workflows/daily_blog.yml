@@ -2,7 +2,7 @@ name: Daily CA Blog Publisher
 
 on:
   schedule:
-    - cron: '30 4 * * *'
+    - cron: '17 20 * * *'
   workflow_dispatch:
 
 permissions:
