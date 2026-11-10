@@ -3,7 +3,7 @@ layout: home
 author_profile: true
 ---
 
-Welcome to **Rawka Agrawal & Company** and **Kailash C. Agrawal & Company**. 
+Welcome to **Rawka Agrawal & Company**. 
 
 We are a premier Chartered Accountancy group based in Indore, Madhya Pradesh. With over four decades of experience, we empower businesses with integrity, expertise, and actionable financial insights. 
 
