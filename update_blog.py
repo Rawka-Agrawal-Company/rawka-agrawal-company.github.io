@@ -29,7 +29,7 @@ for attempt in range(max_retries):
         
     except Exception as e:
         error_msg = str(e)
-        if "503" in error_msg and attempt < max_retries - 1:
+        if attempt < max_retries - 1:
             print(f"Gemini overloaded (Attempt {attempt + 1} of {max_retries}). Waiting 30 seconds...")
             time.sleep(30)
         else:
